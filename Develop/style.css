@@ -140,7 +140,7 @@ button[disabled] {
 #hiddenBox{
   display: none;
 }
-
+/* start button added */
 #start {
   border: none;
   background-color: hsl(360, 91%, 36%);
@@ -156,6 +156,7 @@ button[disabled] {
   text-align: center;
   cursor: pointer;
 }
+
 .startBtn{
   text-align: center;
 }

@@ -1,8 +1,4 @@
 // Assignment code here
-
-
-
-
 function generatePassword(){
   var pass = "";
   var pLen = document.querySelector("#passlength").value;
