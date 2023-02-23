@@ -8,7 +8,10 @@ function generatePassword(){
   var lcBox = document.querySelector("#lBox").checked;
   var nuBox = document.querySelector("#nBox").checked;
   var syBox = document.querySelector("#sBox").checked;
-  for(i=0; i<pLen;i++){
+  var gPass = ucBox+lcBox+nuBox+syBox;
+
+
+  for(i=0; i<pLen/gPass;i++){
     if(lcBox){
     pass=pass+getRandomLower();
     }
@@ -26,7 +29,9 @@ function generatePassword(){
   return pass;
 
 }
-function dispalyBlock() {
+function dispBlock() {
+  document.querySelector("#hiddenBox").style.display = "block";
+}
 
 
 function getRandomUpper(){
@@ -53,30 +58,24 @@ function getRandomSymbols(){
   return symbols[d];
 }
 
-function checkLength(length){
-  if (length <128 && length>8){
-    return 1;
-  }
-  else{
-    alert ("Not valid");
-  }
-}
 
 
-// Get references to the #generate element
-var generateBtn = document.querySelector("#generate");
+
 
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
-
   passwordText.value = password;
 
 }
 
 
-
-
 // Add event listener to generate button
+var startBtn = document.querySelector("#start");
+startBtn.addEventListener("click", dispBlock);
+
+// Get references to the #generate element
+
+var generateBtn = document.querySelector("#generate");
 generateBtn.addEventListener("click", writePassword);
