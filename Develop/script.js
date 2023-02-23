@@ -26,6 +26,8 @@ function generatePassword(){
   return pass;
 
 }
+function dispalyBlock() {
+
 
 function getRandomUpper(){
   var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
