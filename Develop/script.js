@@ -82,11 +82,11 @@ startBtn.addEventListener("click", dispBlock);
 var generateBtn = document.querySelector("#generate");
 generateBtn.addEventListener("click", writePassword);
 
+function rangeValue(){
 
-
+  value.textContent = sliderChange.value
+}
 const value = document.querySelector("#value")
-const input = document.querySelector("#passlength")
-value.textContent = input.value
-input.addEventListener("input", (event) => {
-  value.textContent = event.target.value
-})
+const sliderChange = document.querySelector("#passlength");
+
+sliderChange.addEventListener("input", rangeValue);
