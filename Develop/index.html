@@ -29,7 +29,9 @@
         </div>
         <form id="hiddenBox">
           <label for="passlength">What is the length of your password?</label>
-          <input type="text" id="passlength" name="passlength" placeholder="Enter Length"><br>
+
+          <input id="passlength" name="passlength"  type="range" min="8" max="128" value="128" >
+          <span><output id="value"></output></span><br>
           <input type="checkbox" id="uBox" name="Uppercase" value="Uppercase">
           <label for="Uppercase"> Uppercase</label><br>
           <input type="checkbox" id="lBox" name="Lowercase" value="Lowercase">

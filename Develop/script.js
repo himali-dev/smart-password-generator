@@ -1,7 +1,9 @@
 // Assignment code here
+
+
+
+
 function generatePassword(){
-
-
   var pass = "";
   var pLen = document.querySelector("#passlength").value;
   var ucBox = document.querySelector("#uBox").checked;
@@ -79,3 +81,12 @@ startBtn.addEventListener("click", dispBlock);
 
 var generateBtn = document.querySelector("#generate");
 generateBtn.addEventListener("click", writePassword);
+
+
+
+const value = document.querySelector("#value")
+const input = document.querySelector("#passlength")
+value.textContent = input.value
+input.addEventListener("input", (event) => {
+  value.textContent = event.target.value
+})
