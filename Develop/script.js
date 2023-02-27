@@ -1,4 +1,4 @@
-// Assignment code here
+// function for generation password
 function generatePassword(){
   var pass = "";
   var pLen = document.querySelector("#passlength").value;
@@ -27,10 +27,11 @@ function generatePassword(){
   return pass;
 
 }
+
 function dispBlock() {
   document.querySelector("#hiddenBox").style.display = "block";
 }
-
+// for getting random value alphabet /numeric /symbol
 
 function getRandomUpper(){
   var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -56,18 +57,13 @@ function getRandomSymbols(){
   return symbols[d];
 }
 
-
-
-
-
-// Write password to the #password input
+// getting password from input
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
   passwordText.value = password;
 
 }
-
 
 // Add event listener to generate button
 var startBtn = document.querySelector("#start");
